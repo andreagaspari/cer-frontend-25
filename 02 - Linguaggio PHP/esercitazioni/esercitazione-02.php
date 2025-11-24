@@ -117,3 +117,45 @@ $anni = 0;
             <?php echo ( $anni / count($persone) ); ?>
         </p>
     </div>
+
+<?php
+
+    /**
+     * Esercizio 04
+     * 
+     * Data l'età di una persona, ritorna se può guidare il 125
+     * 
+     * @param int $eta L'età della persona
+     * @return bool Vero se può guidare il 125, falso altrimenti
+     */
+    function puo_guidare_125($eta) {
+        if ($eta >= 16) 
+            return true;
+
+        return false;
+    }
+
+    /**
+     * Esercizio 05
+     * 
+     * Dato un numero, verifica se è divisibile per 3:
+     * ($numero % 3 == 0) => Il resto della divisione tra $numero e 3 è uguale a 0
+     * 
+     * @param int $numero Il numero da valutare
+     * @return bool Vero se divisibile per 3, falso altrimenti
+     */
+    function divisibile_per_3($numero) {
+        return $numero % 3 == 0;
+    }
+
+    /**
+     * Esercizio 06
+     * 
+     * Dato un numero, ritornarlo in formato EURO (€ 10.00)
+     * 
+     * @param float $numero Il prezzo in formato numerico
+     * @return string Il prezzo in formato € 10.00
+     */
+    function number_to_euro($numero) {
+        return "€ " . number_format($numero, 2, ".", "");
+    }
