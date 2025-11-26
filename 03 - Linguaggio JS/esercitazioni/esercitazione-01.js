@@ -2,7 +2,7 @@
 function esercizio01() {
 
     let giorno = window.prompt("Inserisci il giorno:");
-    let mese = window.prompt("Inserisci il giorno:");
+    let mese = window.prompt("Inserisci il mese:");
     let anno = window.prompt("Inserisci l'anno:");
     
     document.getElementById('es1-dataInserita').innerText = giorno + "/" + mese + "/" + anno;
@@ -43,8 +43,11 @@ function esercizio01() {
 
 function esercizio02() {
     let giorno = window.prompt("Inserisci il giorno:");
-    let mese = window.prompt("Inserisci il giorno:");
+    let mese = window.prompt("Inserisci il mese:");
     let anno = window.prompt("Inserisci l'anno:");
+
+    document.getElementById('es2-dataInserita').innerText = giorno + "/" + mese + "/" + anno;
+
 
     // Converto in formato data
     let data = new Date(giorno + "/" + mese + "/" + anno);
