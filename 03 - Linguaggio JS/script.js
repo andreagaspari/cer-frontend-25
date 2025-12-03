@@ -180,3 +180,47 @@ console.log(lista.getElementsByClassName('figlio')); // 1 figlio
 // Inserisci testo semplice nell'elemento
 lista.innerText = "<li>1</li><li class='figlio'>2</li>";
 console.log(lista.getElementsByClassName('figlio')); // 0 figli
+
+var voti = [4, 6, 7, 8, 6, 8];
+var somma = 0;
+for (let i = 0; i < voti.length; i++) {
+    somma += voti[i];
+}
+console.log("Media = " + (somma / voti.length));
+
+var numero = window.prompt("Inserisci un numero");
+
+var elementi = [1, 2, 3, 4, 6, 7, 8, 9];
+
+let i = 0;
+let trovato = false;
+
+while (!trovato && i < elementi.length) {
+    if (elementi[i] == numero) {
+        trovato = true;
+    }
+    i++;
+}
+
+if (trovato) {
+    console.log("Elemento trovato");
+} else {
+    console.log("Elemento non trovato");
+}
+
+var array = [1, 2, 3, 4, 5];
+var oggetto = {
+    nome: "Luca",
+    cognome: "Rossi",
+    chiave: "chiave!"
+};
+
+// Ciclo for of
+for (valore of array) {
+    console.log(valore);
+} 
+
+// Ciclo for in
+for (chiave in oggetto) {
+    console.log(oggetto[chiave]);
+}

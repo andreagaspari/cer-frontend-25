@@ -154,12 +154,12 @@
     $trovato = true;
 
     $i = 0;
-    while (!$trovato && $i < count($valori)) :
-        if ($valori[$i] == $numero) :
+    while (!$trovato && $i < count($valori)) {
+        if ($valori[$i] == $numero) {
             $trovato = true;
-        endif;
+        }
         $i++;
-    endwhile;
+    }
 
     /** 
      * Ciclo For equivalente 
