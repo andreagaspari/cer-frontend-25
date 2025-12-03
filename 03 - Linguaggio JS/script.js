@@ -253,7 +253,7 @@ showPasswordBtn.addEventListener('click', function() {
     }
 });
 
-passwordInput.addEventListener('change', function() {
+passwordInput.addEventListener('change, keyup', function() {
     if (passwordInput.value.length < 3) {
         passwordInput.style.color = "red";
     } else {
