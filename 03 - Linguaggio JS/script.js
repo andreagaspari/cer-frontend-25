@@ -187,7 +187,7 @@ for (let i = 0; i < voti.length; i++) {
     somma += voti[i];
 }
 console.log("Media = " + (somma / voti.length));
-
+/*
 var numero = window.prompt("Inserisci un numero");
 
 var elementi = [1, 2, 3, 4, 6, 7, 8, 9];
@@ -207,7 +207,7 @@ if (trovato) {
 } else {
     console.log("Elemento non trovato");
 }
-
+*/
 var array = [1, 2, 3, 4, 5];
 var oggetto = {
     nome: "Luca",
@@ -224,3 +224,39 @@ for (valore of array) {
 for (chiave in oggetto) {
     console.log(oggetto[chiave]);
 }
+
+var clickMeButton = document.getElementById("click-me-button");
+
+clickMeButton.addEventListener('mouseenter', function() {
+    clickMeButton.style.top = Math.random() * 100 + "%";
+    clickMeButton.style.left = Math.random() * 100 + "%";
+});
+
+/*
+<input id="password" type="password" placeholder="Password" />
+<button id="show-password">
+    Mostra la password
+</button>
+*/
+
+var showPasswordBtn = document.getElementById('show-password');
+var passwordInput = document.getElementById('password');
+
+showPasswordBtn.addEventListener('click', function() {
+
+    if (passwordInput.getAttribute('type') == 'password') {
+        passwordInput.setAttribute('type', 'text');
+        showPasswordBtn.innerText = "Nascondi la password";
+    } else {
+        passwordInput.setAttribute('type', 'password');
+        showPasswordBtn.innerText = "Mostra la password";
+    }
+});
+
+passwordInput.addEventListener('change', function() {
+    if (passwordInput.value.length < 3) {
+        passwordInput.style.color = "red";
+    } else {
+        passwordInput.style.color = "green";
+    }
+});
